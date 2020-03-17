@@ -1,0 +1,357 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  display: block;
+  min-width: 800px;
+  margin: 0;
+  padding: 0;
+
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 400;
+  color: #000000;
+  background-color: lightgoldenrodyellow;
+  background-image: url("../img/bg-pattern.jpg");
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  width: 800px;
+  margin: 0;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.order {
+  display: block;
+  width: 400px;
+  margin: 0;
+  padding: 0;
+
+  border-left: 1px solid #000;
+}
+
+.order__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.order__title {
+  display: block;
+  margin: 0;
+  margin-top: 35px;
+  padding: 0;
+
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-size: 28px;
+  line-height: 36px;
+  font-weight: 700;
+  text-align: center;
+  color: #000000;
+}
+
+.order__pizza,
+.order__drinks,
+.order__fries,
+.order__salad {
+  display: block;
+  width: 300px;
+  margin: 0;
+  margin-top: 5px;
+  padding: 0;
+  padding: 5px 10px;
+
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-size: 22px;
+  line-height: 36px;
+  font-weight: 500;
+  text-align: center;
+  color: #000000;
+}
+
+.order__name,
+.order__address,
+.order__phone {
+  display: block;
+  margin: 0;
+  margin-top: 15px;
+  padding: 0;
+
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-size: 22px;
+  line-height: 26px;
+  font-weight: 400;
+  text-align: center;
+  color: #000000;
+}
+
+.order__name {
+  margin-top: 55px;
+}
+
+.order__amount {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 300px;
+  margin: 0;
+  margin-top: 15px;
+  padding: 0;
+
+}
+
+.order__amount label {
+  display: block;
+  margin: 0;
+  padding: 0;
+  padding: 13px 20px;
+
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-size: 22px;
+  line-height: 26px;
+  font-weight: 400;
+  text-align: center;
+  color: #000000;
+
+  background-color: lightslategray;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.order__amount label:hover {
+  background-color: lightseagreen;
+  transition: 0.5s;
+  box-shadow: 0px 0px 22px -6px rgba(0,0,0,0.75);
+}
+
+.order__amount input {
+  display: none;
+}
+
+.order__amount--pizza input[type='radio']:checked + label,
+.order__amount--drinks input[type='radio']:checked + label,
+.order__amount--fries input[type='radio']:checked + label,
+.order__amount--salad input[type='radio']:checked + label {
+  background-color: tomato;
+}
+
+.order__name-input,
+.order__address-input,
+.order__phone-input {
+  display: block;
+  width: 300px;
+  margin: 0;
+  margin-top: 5px;
+  padding: 0;
+  padding: 10px 10px;
+
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-size: 22px;
+  line-height: 26px;
+  font-weight: 400;
+  text-align: center;
+  color: #000000;
+
+  border: none;
+  transition: 0.5s;
+}
+
+.order__name-input:focus:invalid,
+.order__address-input:focus:invalid,
+.order__phone-input:focus:invalid {
+  background-color: tomato;
+  transition: 0.5s;
+}
+
+.order__overview {
+  display: block;
+  margin: 0;
+  padding: 0;
+
+  text-decoration: none;
+  list-style: none;
+}
+
+.overview {
+  display: block;
+  width: 300px;
+  margin: 0;
+  margin-top: 25px;
+  padding: 0;
+
+  text-decoration: none;
+  list-style: none;
+}
+
+.overview__item {
+  display: block;
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  margin-top: 10px;
+  padding: 0;
+
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 400;
+  text-align: center;
+  color: #000000;
+
+  border-bottom: 1px dotted #000000;
+}
+
+.overview__item span {
+  font-weight: 700;
+}
+
+.order__total-price {
+  display: block;
+  margin: 0;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  padding: 0;
+
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: underline;
+  color: #000000;
+}
+
+.order__btn {
+  display: block;
+  width: 300px;
+  margin: 0;
+  margin: 0 auto;
+  margin-bottom: 25px;
+  padding: 0;
+  padding: 8px 18px;
+
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-size: 26px;
+  line-height: 36px;
+  font-weight: 700;
+  text-align: center;
+  color: #000000;
+
+  border: none;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.order__btn:hover {
+  background-color: tomato;
+  transition: 0.5s;
+  box-shadow: 0px 0px 22px -6px rgba(0,0,0,0.75);
+}
+
+.orders {
+  display: block;
+  width: 400px;
+  margin: 0;
+  padding: 0;
+
+  border-left: 1px solid #000000;
+  border-right: 1px solid #000000;
+}
+
+.orders__title {
+  display: block;
+  margin: 0;
+  margin-top: 35px;
+  margin-bottom: 5px;
+  padding: 0;
+
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-size: 28px;
+  line-height: 36px;
+  font-weight: 700;
+  text-align: center;
+  color: #000000;
+}
+
+.orders__items {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  margin: 0;
+  margin: 0 auto;
+  margin-bottom: 25px;
+  padding: 0;
+  padding: 5px;
+
+  list-style: none;
+  text-decoration: none;
+  background-color: rgba(0, 0, 0, 0.2);
+  background-color: lightslategray;
+  transition: 0.5s;
+}
+
+.orders__items:hover {
+  box-shadow: 0px 0px 22px -6px rgba(0,0,0,0.75);
+  transition: 0.5s;
+}
+
+.orders__item {
+  display: block;
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  margin-top: 5px;
+  padding: 0;
+
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 600;
+  text-align: right;
+  color: #000000;
+
+  border-bottom: 1px dotted rgba(0, 0, 0, 0.7);
+}
+
+.orders__items span {
+  font-weight: 700;
+}
+
+.orders__btn {
+  display: block;
+  width: 290px;
+  margin: 0;
+  margin: 0 auto;
+  margin-top: 10px;
+  padding: 0;
+  padding: 5px 0px;
+
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 700;
+  text-align: center;
+  color: #000000;
+
+  border: none;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.orders__btn:hover {
+  background-color: tomato;
+  transition: 0.5s;
+}

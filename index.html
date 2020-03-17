@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Order Pizza</title>
+</head>
+<body>
+  <div class="container">
+    <form action="" class="order">
+      <div class="order__item">
+        <label class="order__title" for="">Your pizza...?</label>
+        <select class="order__pizza" name="pizza" id="">
+          <option value="any"></option>
+          <option value="1">Pizza Los Angeles / 30cm</option>
+          <option value="2">Pizza San Francisco / 30cm</option>
+          <option value="3">Pizza New York / 30cm</option>
+          <option value="4">Pizza Maimi / 30cm</option>
+          <option value="5">Pizza Denver / 30cm</option>
+        </select>
+        <ul class="order__amount order__amount--pizza">
+          <input type="radio" name="pizza" id="1" value="1" checked>
+          <label for="1">1</label>
+          <input type="radio" name="pizza" id="2" value="2">
+          <label for="2">2</label>
+          <input type="radio" name="pizza" id="3" value="3">
+          <label for="3">3</label>
+          <input type="radio" name="pizza" id="4" value="4">
+          <label for="4">4</label>
+          <input type="radio" name="pizza" id="5" value="5">
+          <label for="5">5</label>
+        </ul>
+        <img src="" alt="" width="" height="" class="order__pizza-photo">
+      </div>
+      <div class="order__item">  
+        <label class="order__title" for="">Your drinks...?</label>
+        <select class="order__drinks" name="" id="">
+          <option value="any"></option>
+          <option value="1">Moka Cola Small / 0.3l</option>
+          <option value="2">Moka Cola Medium / 0.5l</option>
+          <option value="3">Moka Cola Big / 0.7l</option>
+          <option value="4">Moka Cola Big XL / 1l</option>
+          <option value="5">Moka Cola Big XXL / 1.5l</option>
+        </select>
+        <ul class="order__amount order__amount--drinks">
+          <input type="radio" name="drinks" id="6" value="1" checked>
+          <label for="6">1</label>
+          <input type="radio" name="drinks" id="7" value="2">
+          <label for="7">2</label>
+          <input type="radio" name="drinks" id="8" value="3">
+          <label for="8">3</label>
+          <input type="radio" name="drinks" id="9" value="4">
+          <label for="9">4</label>
+          <input type="radio" name="drinks" id="10" value="5">
+          <label for="10">5</label>
+        </ul>
+      </div>    
+      <div class="order__item">
+        <label class="order__title" for="" >Some fries...?</label>
+        <select class="order__fries" name="" id="">
+          <option value="any"></option>
+          <option value="1">Small / 100g</option>
+          <option value="2">Medium/ 250g</option>
+          <option value=3"">Big / 500g</option>
+        </select>
+        <ul class="order__amount order__amount--fries ">
+          <input type="radio" name="fries" id="11" value="1" checked>
+          <label for="11">1</label>
+          <input type="radio" name="fries" id="12" value="2">
+          <label for="12">2</label>
+          <input type="radio" name="fries" id="13" value="3">
+          <label for="13">3</label>
+          <input type="radio" name="fries" id="14" value="4">
+          <label for="14">4</label>
+          <input type="radio" name="fries" id="15" value="5">
+          <label for="15">5</label>
+        </ul>
+      </div>
+      <div class="order__item">
+        <label class="order__title" for="" >Some salad...?</label>
+        <select class="order__salad" name="" id="">
+          <option value="any"></option>
+          <option value="1">Small / 100g</option>
+          <option value="2">Medium/ 250g</option>
+          <option value="3">Big / 500g</option>
+        </select>
+        <ul class="order__amount order__amount--salad">
+          <input type="radio" name="salad" id="16" value="1" checked>
+          <label for="16">1</label>
+          <input type="radio" name="salad" id="17" value="2">
+          <label for="17">2</label>
+          <input type="radio" name="salad" id="18" value="3">
+          <label for="18">3</label>
+          <input type="radio" name="salad" id="19" value="4">
+          <label for="19">4</label>
+          <input type="radio" name="salad" id="20" value="5">
+          <label for="20">5</label>
+        </ul>
+      </div>
+      <div class="order__item">
+        <label for="name" class="order__name">Name:*</label>
+        <input type="text" class="order__name-input" id="name" placeholder="John" minlength="3" maxlength="30" required>
+        <label for="address" class="order__address">Street:*</label>
+        <input type="text" class="order__address-input" id="address" placeholder="Lake Street" minlength="2" maxlength="30" required>
+        <label for="phone" class="order__phone">Phone:*</label>
+        <input type="tel" class="order__phone-input" id="phone" pattern="[0-9]{4}-[0-9]{4}-[0-9]{4}" placeholder="0157-7777-3456" required>
+      </div>
+
+      <div class="order__item">
+        <ul class="order__overview overview">
+
+        </ul>
+        <p class="order__total-price">Total: 0 $</p>
+      </div>
+
+      <button class="order__btn" type="submit">Order</button>
+    </form>
+
+    <section class="orders">
+      <h2 class="orders__title">Orders:</h2>
+
+    </section>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/date-fns/2.0.0-alpha0/date_fns.min.js"></script>
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-firestore.js"></script>
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+      https://firebase.google.com/docs/web/setup#available-libraries -->
+  <script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-analytics.js"></script>
+
+  <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+      apiKey: "AIzaSyCm9tCVqc09wYwTxebZH-ihqYLKBSQFpZY",
+      authDomain: "projects-c6a7f.firebaseapp.com",
+      databaseURL: "https://projects-c6a7f.firebaseio.com",
+      projectId: "projects-c6a7f",
+      storageBucket: "projects-c6a7f.appspot.com",
+      messagingSenderId: "116641409779",
+      appId: "1:116641409779:web:d0bd6716c540db8e77e586",
+      measurementId: "G-403J5C77N9"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    const db = firebase.firestore();
+    firebase.analytics();
+  </script>
+  <script src="js/pizza.js"></script>
+  <script src="js/backend.js"></script>
+</body>
+</html>
