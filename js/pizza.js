@@ -223,6 +223,9 @@ form.addEventListener('submit', e => {
   })
 
   form.reset();
-  photoOfPizza.src = `img/pizza-icon.png`;
+  photoOfPizza.src = ``;
+  photoOfPizza.width = 0;
+    photoOfPizza.height = 0;
   totalPriceOutput.textContent = 'Total: 0 $';
+  orderOverview.textContent = '';
 });
