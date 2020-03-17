@@ -224,4 +224,5 @@ form.addEventListener('submit', e => {
 
   form.reset();
   photoOfPizza.src = `img/pizza-icon.png`;
+  totalPriceOutput.textContent = 'Total: 0 $';
 });
