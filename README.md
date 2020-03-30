@@ -1,4 +1,6 @@
-# Order-Pizza-App
+## Order Pizza App
+
+The project online [here](https://volodymyrvoronov.github.io/Order-Pizza-App/).
 
 With this Application you can:
 - order pizza, drinks, fries and salad.
